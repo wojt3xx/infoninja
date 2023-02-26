@@ -1,10 +1,18 @@
 #!/usr/bin/env python
 
+import subprocess
 import argparse
 from bs4 import BeautifulSoup
 import requests
 import datetime
 import re
+
+# installing missing modules
+try:
+    import bs4
+except ImportError:
+    # If the module is not installed, run the 'pip install' command
+    subprocess.call(['pip', 'install', 'bs4'])
 
 # create an ArgumentParser object
 parser = argparse.ArgumentParser(description='InfoNinja website crawler')
