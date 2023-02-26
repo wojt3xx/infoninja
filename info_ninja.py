@@ -15,7 +15,7 @@ parser.add_argument('url', type=str, help='URL to crawl')
 # parse the command line arguments
 args = parser.parse_args()
 
-# crawl the website
+# set parameters
 url = args.url
 response = requests.get(url)
 soup = BeautifulSoup(response.content, 'html.parser')
